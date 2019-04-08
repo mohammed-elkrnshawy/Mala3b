@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">Mala3b</string>
+    <string name="Playground_Description">Playground Description</string>
+    <string name="staduim_name">Staduim Name</string>
+    <string name="staduim_address">Staduim Address</string>
+    <string name="next">Next</string>
+
+
+    <string-array name="staduim_size">
+        <item>3X3</item>
+        <item>4X4</item>
+        <item>5X5</item>
+        <item>6X6</item>
+        <item>8X8</item>
+        <item>11X11</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="add_stadium">Add Stadium</string>
+
 </resources>

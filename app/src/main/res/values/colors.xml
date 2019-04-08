@@ -6,4 +6,6 @@
     <color name="colorGray">#ededed</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="colorGreen">#15d075</color>
+    <color name="colorGreen2">#138d52</color>
 </resources>
