@@ -53,10 +53,12 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     @BindView(R.id.btnNext)
     Button btnNext;
 
+    private AddStadiumFeatureFragment featureFragment;
     private boolean isMainPhoto=false;
     private CameraHelper cameraHelper;
     private AddStadiumPresenter stadiumPresenter;
     private PhotoAddAdapter photoAddAdapter;
+    private Bitmap mainPhoto;
     private List<Bitmap>  bitmapList;
     private View view;
 
@@ -99,7 +101,7 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
 
     @Override
     public void onPrepareRecycle() {
-        Bitmap icon = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_feature);
+        Bitmap icon = BitmapFactory.decodeResource(getContext().getResources(), R.drawable.ic_photo);
         bitmapList=new ArrayList<>();
         bitmapList.add(icon);
         photoAddAdapter=new PhotoAddAdapter(bitmapList,getContext(),cameraHelper);
@@ -114,6 +116,13 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
 
     @Override
     public void validData() {
+
+        if (mainPhoto==null){
+            stadiumPhoto.requestFocus();
+            Toast.makeText(getContext(), getContext().getString(R.string.select_photo), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if(TextUtils.isEmpty(stadiumName.getText().toString().trim())){
             stadiumName.setError(getResources().getString(R.string.requiredField));
             stadiumName.requestFocus();
@@ -126,18 +135,15 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
             return;
         }
 
-        if(spinnerSize.getSelectedItemPosition()==0){
-            spinnerSize.requestFocus();
-            return;
-        }
-
-        if(spinnerType.getSelectedItemPosition()==0){
-            spinnerType.requestFocus();
-            return;
-        }
 
         stadiumPresenter.saveData();
 
+    }
+
+    @Override
+    public void saveData() {
+        featureFragment=new AddStadiumFeatureFragment();
+        setFragment(featureFragment,getString(R.string.feature));
     }
 
     @Override
@@ -147,13 +153,18 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
             stadiumPresenter.onMapBack(requestCode, resultCode, data);
         else if ((requestCode==Constant.Camera||requestCode==Constant.Gallery)&&resultCode==Activity.RESULT_OK){
             if (isMainPhoto){
-                Bitmap bitmap=cameraHelper.onResult(requestCode,data);
-                stadiumPhoto.setImageBitmap(bitmap);
+                mainPhoto=cameraHelper.onResult(requestCode,data);
+                stadiumPhoto.setImageBitmap(mainPhoto);
                 isMainPhoto=false;
             }else {
                 bitmapList.add(cameraHelper.onResult(requestCode,data));
                 photoAddAdapter.notifyDataSetChanged();
             }
         }
+    }
+
+    private void setFragment(Fragment fragment, String Title) {
+        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.stadium_container, fragment).addToBackStack(Title)
+                .commitAllowingStateLoss();
     }
 }

@@ -45,5 +45,6 @@ public class AddStadiumPresenter {
     }
 
     public void saveData() {
+        view.saveData();
     }
 }
