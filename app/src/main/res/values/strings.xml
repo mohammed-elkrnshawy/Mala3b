@@ -24,5 +24,9 @@
     <string name="close">Close</string>
     <string name="no_detected_address">No Detected Address</string>
     <string name="requiredField">Required Field</string>
+    <string name="takephoto">Take Photo</string>
+    <string name="choosegallery">Choose From Gallery</string>
+    <string name="cancel_dialog">Cancel Dialog</string>
+    <string name="add_photo">Add Photo</string>
 
 </resources>

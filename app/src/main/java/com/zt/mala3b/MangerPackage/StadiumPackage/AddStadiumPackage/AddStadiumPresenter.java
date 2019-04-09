@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.zt.mala3b.R;
 import com.zt.mala3b.SharedPackage.Activities.MapsActivity;
+import com.zt.mala3b.SharedPackage.ClassesPackage.CameraHelper;
 import com.zt.mala3b.SharedPackage.ClassesPackage.Constant;
 
 
@@ -24,6 +25,7 @@ public class AddStadiumPresenter {
         ArrayAdapter<String> adapterSize = new ArrayAdapter<String>(view.getContext(),
                 android.R.layout.simple_spinner_item,view.getResources().getStringArray(R.array.staduim_size));
         view.onPrepareSpinners(adapterSize);
+        view.onPrepareRecycle();
     }
 
     public void openMap() {
