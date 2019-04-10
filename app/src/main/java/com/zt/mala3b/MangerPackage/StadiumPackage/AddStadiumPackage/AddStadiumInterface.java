@@ -6,4 +6,5 @@ public interface AddStadiumInterface {
     void onPrepareRecycle();
     void onPrepareSpinners(ArrayAdapter<String> adapterSize);
     void validData();
+    void saveData();
 }

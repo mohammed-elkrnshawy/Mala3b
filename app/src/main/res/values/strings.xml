@@ -40,5 +40,7 @@
     <string name="choosegallery">Choose From Gallery</string>
     <string name="cancel_dialog">Cancel Dialog</string>
     <string name="add_photo">Add Photo</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="feature">Feature</string>
 
 </resources>
