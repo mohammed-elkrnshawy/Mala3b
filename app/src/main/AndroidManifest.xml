@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.zt.mala3b">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -11,14 +16,31 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.SignUp.SignUpActivity"></activity>
         <activity android:name=".Activity.Login.LoginActivity" />
-        <activity android:name=".Activity.Splash.SplashActivity">
+        <activity android:name=".Activity.Splash.SplashActivity"/>
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.zt.mala3b.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBm07pLq6SsC94ybpdTV0T3FD3llb5KSB8" />
+
+        <activity android:name=".SharedPackage.Activities.MapsActivity" />
+
+        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".Activity.Main.MainActivity"/>
-        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity"></activity>
     </application>
 
 </manifest>
