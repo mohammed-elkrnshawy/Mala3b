@@ -26,6 +26,7 @@ import com.zt.mala3b.R;
 import com.zt.mala3b.SharedPackage.Activities.MapsActivity;
 import com.zt.mala3b.SharedPackage.ClassesPackage.CameraHelper;
 import com.zt.mala3b.SharedPackage.ClassesPackage.Constant;
+import com.zt.mala3b.SharedPackage.ClassesPackage.SharedData;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,8 +44,10 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     ImageView stadiumPhoto;
     @BindView(R.id.recylePhotos)
     RecyclerView recylePhotos;
-    @BindView(R.id.stadiumName)
-    EditText stadiumName;
+    @BindView(R.id.stadiumNameAR)
+    EditText stadiumNameAR;
+    @BindView(R.id.stadiumNameEN)
+    EditText stadiumNameEN;
     @BindView(R.id.stadiumAddress)
     TextView stadiumAddress;
     @BindView(R.id.spinnerSize)
@@ -53,6 +56,7 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     @BindView(R.id.btnNext)
     Button btnNext;
 
+    private double lat,lng;
     private AddStadiumFeatureFragment featureFragment;
     private boolean isMainPhoto=false;
     private CameraHelper cameraHelper;
@@ -61,6 +65,7 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     private Bitmap mainPhoto;
     private List<Bitmap>  bitmapList;
     private View view;
+    private Bundle bundleExtra;
 
 
     public AddStadiumFragment() {
@@ -110,8 +115,9 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     }
 
     @Override
-    public void onPrepareSpinners(ArrayAdapter<String> adapterSize) {
+    public void onPrepareSpinners(ArrayAdapter<String> adapterSize,ArrayAdapter<String> adapterType) {
         spinnerSize.setAdapter(adapterSize);
+        spinnerType.setAdapter(adapterType);
     }
 
     @Override
@@ -123,9 +129,15 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
             return;
         }
 
-        if(TextUtils.isEmpty(stadiumName.getText().toString().trim())){
-            stadiumName.setError(getResources().getString(R.string.requiredField));
-            stadiumName.requestFocus();
+        if(TextUtils.isEmpty(stadiumNameAR.getText().toString().trim())){
+            stadiumNameAR.setError(getResources().getString(R.string.requiredField));
+            stadiumNameAR.requestFocus();
+            return;
+        }
+
+        if(TextUtils.isEmpty(stadiumNameEN.getText().toString().trim())){
+            stadiumNameEN.setError(getResources().getString(R.string.requiredField));
+            stadiumNameEN.requestFocus();
             return;
         }
 
@@ -141,7 +153,9 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     }
 
     @Override
-    public void saveData() {
+    public void saveData(double lat,double lng) {
+        this.lat=lat;
+        this.lng=lng;
         featureFragment=new AddStadiumFeatureFragment();
         setFragment(featureFragment,getString(R.string.feature));
     }
@@ -164,7 +178,20 @@ public class AddStadiumFragment extends Fragment implements AddStadiumInterface 
     }
 
     private void setFragment(Fragment fragment, String Title) {
-        getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.stadium_container, fragment).addToBackStack(Title)
+
+        bundleExtra=new Bundle();
+        SharedData.bitmapStadiumMain=mainPhoto;
+        SharedData.bitmapsStadiumList=bitmapList;
+        bundleExtra.putInt("stadiumSize",5);
+        bundleExtra.putString("stadiumName_AR",stadiumNameAR.getText().toString().trim());
+        bundleExtra.putString("stadiumName_EN",stadiumNameEN.getText().toString().trim());
+        bundleExtra.putString("stadiumAddress",stadiumAddress.getText().toString().trim());
+        bundleExtra.putDouble("stadiumLat",lat);
+        bundleExtra.putDouble("stadiumLng",lng);
+
+
+        fragment.setArguments(bundleExtra);
+        getFragmentManager().beginTransaction().replace(R.id.stadium_container, fragment).addToBackStack(Title)
                 .commitAllowingStateLoss();
     }
 }

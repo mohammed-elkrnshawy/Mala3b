@@ -67,14 +67,31 @@
                 />
 
             <EditText
-                android:id="@+id/stadiumName"
+                android:id="@+id/stadiumNameAR"
                 android:textSize="12sp"
                 android:textColor="@color/colorBlack"
                 android:paddingEnd="20dp"
                 android:paddingStart="20dp"
                 android:paddingTop="5dp"
                 android:paddingBottom="5dp"
-                android:hint="@string/staduim_name"
+                android:hint="@string/staduim_name_AR"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/shape_edittext_border"
+                android:layout_width="match_parent"
+                android:layout_height="45dp" />
+
+            <EditText
+                android:id="@+id/stadiumNameEN"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:paddingEnd="20dp"
+                android:paddingStart="20dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:hint="@string/staduim_name_EN"
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"

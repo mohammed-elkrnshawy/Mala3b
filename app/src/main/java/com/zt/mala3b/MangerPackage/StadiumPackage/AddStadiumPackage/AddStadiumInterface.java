@@ -4,7 +4,7 @@ import android.widget.ArrayAdapter;
 
 public interface AddStadiumInterface {
     void onPrepareRecycle();
-    void onPrepareSpinners(ArrayAdapter<String> adapterSize);
+    void onPrepareSpinners(ArrayAdapter<String> adapterSize,ArrayAdapter<String> adapterType);
     void validData();
-    void saveData();
+    void saveData(double lat,double lng);
 }
