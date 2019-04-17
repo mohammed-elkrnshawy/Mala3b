@@ -48,5 +48,9 @@
     <string name="feature">Feature</string>
     <string name="staduim_name_EN">Sadium Name English</string>
     <string name="staduim_name_AR">Stadium Name Arabic</string>
+    <string name="manger">Manger</string>
+    <string name="palyer">Player</string>
+    <string name="select_role"><u>Select Role</u></string>
+    <string name="stadium">Stadium</string>
 
 </resources>

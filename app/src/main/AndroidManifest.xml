@@ -8,16 +8,18 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.SignUp.SignUpActivity"></activity>
+        <activity android:name=".Activity.SelectRole.SelectRoleActivity"></activity>
+        <activity android:name=".Activity.SignUp.SignUpActivity" />
         <activity android:name=".Activity.Login.LoginActivity" />
-        <activity android:name=".Activity.Splash.SplashActivity"/>
+        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity" />
+        <activity android:name=".Activity.Main.MainActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -34,14 +36,13 @@
             android:value="AIzaSyBm07pLq6SsC94ybpdTV0T3FD3llb5KSB8" />
 
         <activity android:name=".SharedPackage.Activities.MapsActivity" />
-
-        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity">
+        <activity android:name=".Activity.Splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.Main.MainActivity"/>
     </application>
 
 </manifest>
