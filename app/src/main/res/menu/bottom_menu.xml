@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:showIn="navigation_view"
+    >
+
+    <item
+        android:id="@+id/reservation"
+        android:title="@string/reservations"
+        android:icon="@drawable/ic_ball"
+        />
+
+    <item
+        android:id="@+id/addStadium"
+        android:title="@string/add_stadium"
+        android:icon="@drawable/ic_plus"
+        />
+
+    <item
+        android:id="@+id/good"
+        android:title="@string/good"
+        android:icon="@drawable/ic_good"
+        />
+
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile"
+        android:icon="@drawable/ic_profile"
+        />
+
+
+</menu>

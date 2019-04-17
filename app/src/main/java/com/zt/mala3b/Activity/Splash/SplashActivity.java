@@ -7,9 +7,14 @@ import com.zt.mala3b.R;
 
 public class SplashActivity extends AppCompatActivity {
 
+    SplashPresenter mSplashPresenter ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        mSplashPresenter = new SplashPresenter(SplashActivity.this) ;
+        mSplashPresenter.ReadSharedPreference();
+        mSplashPresenter.setLanguages();
     }
 }

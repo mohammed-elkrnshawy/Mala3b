@@ -42,5 +42,14 @@
     <string name="add_photo">Add Photo</string>
     <string name="select_photo">Select Photo</string>
     <string name="feature">Feature</string>
-
+    <string name="phone">Phone</string>
+    <string name="required_field">Required Field</string>
+    <string name="enter_code">Enter the activation code sent to the number</string>
+    <string name="resend_activation_code"><u>Resend activation code</u></string>
+    <string name="confirm">Confirm</string>
+    <string name="enter_validate">Enter valid code !</string>
+    <string name="reservations">Reservations</string>
+    <string name="add_stad">Add Stadium</string>
+    <string name="good">Good</string>
+    <string name="profile">Profile</string>
 </resources>

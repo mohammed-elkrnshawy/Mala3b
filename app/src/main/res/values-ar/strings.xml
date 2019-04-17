@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Mala3b</string>
-    <string name="login">Login</string>
-    <string name="register">Register</string>
-    <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="forgot_your_password">Forgot your password?</string>
-    <string name="don_t_have_an_account">Don’t have an account?</string>
-    <string name="register_now">Register now</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="name">Name</string>
-    <string name="already_have_an_account">already have an account?</string>
-    <string name="login_now">Login now</string>
+    <string name="login">تسجيل الدخول</string>
+    <string name="register">تسجيل جديد</string>
+    <string name="email">البريد الإلكترونى</string>
+    <string name="password">كلمة المرور</string>
+    <string name="forgot_your_password">نسيت كلمة المرور ؟</string>
+    <string name="don_t_have_an_account">ليس لديك حساب ؟</string>
+    <string name="register_now">سجل الان</string>
+    <string name="sign_up">تسجيل</string>
+    <string name="name">الأسم</string>
+    <string name="already_have_an_account">لديك حساب بالفعل ؟</string>
+    <string name="login_now">تسجيل الدخول</string>
     <string name="Playground_Description">Playground Description</string>
     <string name="staduim_name">Staduim Name</string>
     <string name="staduim_address">Staduim Address</string>
@@ -40,5 +40,17 @@
     <string name="choosegallery">Choose From Gallery</string>
     <string name="cancel_dialog">Cancel Dialog</string>
     <string name="add_photo">Add Photo</string>
+    <string name="phone">رقم الهاتف</string>
+    <string name="required_field">هذا الحقل مطلوب !</string>
+    <string name="select_photo">Select Photo</string>
+    <string name="feature">Feature</string>
+    <string name="enter_code">أدخل الكود الذي تم إرسالة إلى الرقم</string>
+    <string name="resend_activation_code"><u>إعادة إرسال كود التفعيل</u></string>
+    <string name="confirm">تأكيد</string>
+    <string name="enter_validate">ادخل كود صحيح !</string>
+    <string name="reservations">Reservations</string>
+    <string name="add_stad">Add Stadium</string>
+    <string name="good">Good</string>
+    <string name="profile">Profile</string>
 
 </resources>

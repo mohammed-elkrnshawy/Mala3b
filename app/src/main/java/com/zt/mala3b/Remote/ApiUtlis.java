@@ -6,7 +6,7 @@ package com.zt.mala3b.Remote;
 
 public class ApiUtlis {
 
-    public static final String Base_Url="http://bqala.panorama-q.com/api/";
+    public static final String Base_Url="http://mla3b.website/api/";
 
 
     public static UserService getUserService()

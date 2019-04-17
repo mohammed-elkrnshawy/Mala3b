@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    tools:context=".Activity.Activation.ActivationActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginStart="50dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_code"
+                android:textColor="@color/colorBlack"
+                android:textSize="10sp"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:textSize="10sp"
+                android:text="1015555589"
+                android:id="@+id/Phone"
+                android:textColor="@color/colorBlack"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/L"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:weightSum="4">
+
+            <EditText
+                android:id="@+id/code4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:inputType="phone"
+                />
+
+            <EditText
+                android:id="@+id/code3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:inputType="phone"
+                />
+
+            <EditText
+                android:id="@+id/code2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:inputType="phone"
+                tools:ignore="RtlCompat" />
+
+            <EditText
+                android:id="@+id/code1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:inputType="phone"
+                />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="80dp"
+            android:text="@string/resend_activation_code"
+            android:id="@+id/Resend"
+            />
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:background="@drawable/shape_btn_register"
+            android:textColor="@color/colorWhite"
+            android:text="@string/confirm"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Confirm"
+            android:layout_marginTop="90dp"
+            />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<ScrollView
+    android:fillViewport="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,23 +9,29 @@
     android:background="@color/colorWhite"
     tools:context=".Activity.SignUp.SignUpActivity">
 
-
-    <RelativeLayout
+    <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="vertical"
-            android:layout_marginStart="35dp"
-            android:layout_marginEnd="35dp"
-            >
+        <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="35dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                >
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:src="@drawable/ic_logo"
                 android:layout_gravity="center_horizontal"
                 />
@@ -33,14 +40,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sign_up"
-                android:layout_marginTop="30dp"
-                android:textSize="32sp"
+                android:layout_marginTop="20dp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 />
 
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="45dp"
+                android:layout_marginTop="18dp"
                 android:id="@+id/txtInputName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -53,14 +60,14 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorWhite" />
+                     />
 
             </android.support.design.widget.TextInputLayout>
 
 
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="12dp"
                 android:id="@+id/txtInputEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -73,12 +80,31 @@
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorWhite" />
+
+                    />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="12dp"
+                android:id="@+id/txtInputPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/edtPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/phone"
+                    android:inputType="phone"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                     />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="12dp"
                 android:id="@+id/txtInputPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -91,7 +117,7 @@
                     android:inputType="textPassword"
                     android:maxLines="1"
                     android:singleLine="true"
-                    android:textColor="@color/colorWhite"
+
                     android:drawableEnd="@drawable/ic_eye"
                     />
 
@@ -100,42 +126,55 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:gravity="center"
                 android:text="@string/sign_up"
-                android:layout_marginTop="65dp"
+                android:layout_marginTop="30dp"
                 android:id="@+id/btnRegister"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:elevation="10dp"
                 android:textColor="@color/colorWhite"
                 android:background="@drawable/shape_btn_register"
                 />
 
 
+
+        </LinearLayout>
+
             <LinearLayout
+                android:layout_below="@+id/lin"
+                android:layout_alignParentBottom="true"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_marginTop="60dp"
-                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_centerHorizontal="true"
                 >
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorGray1"
+                    android:layout_gravity="center_vertical"
                     android:text="@string/already_have_an_account"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
+                    android:layout_gravity="center_vertical"
                     android:layout_height="wrap_content"
                     android:textColor="@color/colorGreen"
                     android:text="@string/login_now"
                     android:textStyle="bold"
+                    android:layout_marginStart="15dp"
                     android:id="@+id/txtLogin"
                     />
 
             </LinearLayout>
-        </LinearLayout>
 
     </RelativeLayout>
-</android.support.design.widget.CoordinatorLayout>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+</ScrollView>
