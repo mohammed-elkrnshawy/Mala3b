@@ -29,8 +29,8 @@ public class AddStadiumActivity extends AppCompatActivity {
     }
 
     private void setFragment(Fragment fragment, String Title) {
-        getSupportFragmentManager().beginTransaction().replace(R.id.stadium_container, fragment).addToBackStack(Title)
-                .commitAllowingStateLoss();
+        getSupportFragmentManager().beginTransaction().replace(R.id.stadium_container, fragment)
+                .addToBackStack(Title).commit();
     }
 
 }

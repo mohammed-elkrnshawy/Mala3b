@@ -31,6 +31,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activity.SelectRole.SelectRoleActivity"></activity>
+        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity" />
+        <activity android:name=".Activity.Main.MainActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -47,8 +50,7 @@
             android:value="AIzaSyBm07pLq6SsC94ybpdTV0T3FD3llb5KSB8" />
 
         <activity android:name=".SharedPackage.Activities.MapsActivity" />
-        <activity android:name=".MangerPackage.StadiumPackage.AddStadiumPackage.AddStadiumActivity" />
-        <activity android:name=".Activity.Main.MainActivity" />
+
     </application>
 
 </manifest>

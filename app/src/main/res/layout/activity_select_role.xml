@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SelectRole.SelectRoleActivity">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginBottom="70dp"
+        app:cardCornerRadius="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/select_role"/>
+
+            <LinearLayout
+                android:id="@+id/linearPlayer"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_players"
+                    android:layout_width="154dp"
+                    android:layout_height="154dp" />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/palyer"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearStadium"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:src="@drawable/ic_stadium"
+                    android:layout_width="154dp"
+                    android:layout_height="154dp" />
+
+                <TextView
+                    android:textSize="20dp"
+                    android:textColor="@color/colorBlack"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stadium"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

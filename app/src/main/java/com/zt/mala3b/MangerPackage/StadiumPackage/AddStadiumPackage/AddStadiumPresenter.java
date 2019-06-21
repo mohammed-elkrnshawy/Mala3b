@@ -24,7 +24,9 @@ public class AddStadiumPresenter {
     public void PrepareSpinners(){
         ArrayAdapter<String> adapterSize = new ArrayAdapter<String>(view.getContext(),
                 android.R.layout.simple_spinner_item,view.getResources().getStringArray(R.array.staduim_size));
-        view.onPrepareSpinners(adapterSize);
+        ArrayAdapter<String> adapterType = new ArrayAdapter<String>(view.getContext(),
+                android.R.layout.simple_spinner_item,view.getResources().getStringArray(R.array.staduim_type));
+        view.onPrepareSpinners(adapterSize,adapterType);
         view.onPrepareRecycle();
     }
 
@@ -45,6 +47,6 @@ public class AddStadiumPresenter {
     }
 
     public void saveData() {
-        view.saveData();
+        view.saveData(lat,lng);
     }
 }
